@@ -78,7 +78,7 @@ class post(Form):
         
     def check_auth(self):
         log = self.login
-        if log.get('auth')  == True:
+        if log.get('auth')  == 1:
             with open("cookies.txt", "w") as ck:
                 ck.write(str(log.get("cookies")))
             return "Logged in Successfully"
